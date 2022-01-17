@@ -1,0 +1,34 @@
+{
+    "name": "bagisto/bagisto-mangopay-payment",
+    "description": "Mangopay Payment Gateway is an advanced and feature-rich module that will integrate Bagisto store with the Mangopay Payment Gateway",
+    "keywords": [
+        "bagisto",
+        "mangopay",
+        "mangopay payment"
+    ],
+    "homepage": "https://github.com/bagisto/bagisto-mangopay-payment",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "bagisto"
+            
+        }
+    ],
+    "require": {
+        "konekt/concord": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webkul\\MangoPay\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webkul\\MangoPay\\Providers\\MangoPayServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
+
