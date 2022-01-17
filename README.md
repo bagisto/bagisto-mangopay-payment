@@ -21,7 +21,7 @@ It packs in lots of demanding features that allows your business to scale in no 
 
 - **NOTE**: This Module is an add-on of Marketplace module.You need to Install the Markeplace module first to use this add-on.
 
-## Installation with composer:
+## Installation :
 - Run the following command
 ```
 composer require bagisto/bagisto-mangopay-payment
@@ -66,56 +66,5 @@ php artisan vendor:publish --force
 ```
 
 -> Press the number before MangoPayServiceProvider and then press enter to publish all assets and configurations.
-
-## Installation without composer:
-
-- Unzip the respective extension zip and then merge "packages" folders into project root directory.
-- Goto config/app.php file and add following line under 'providers'
-
-```
-Webkul\MangoPay\Providers\MangoPayServiceProvider::class
-```
-
-- Goto composer.json file and add following line under 'psr-4'
-
-```
-"Webkul\\MangoPay\\": "packages/Webkul/MangoPay/src"
-```
-
-- Run the command below to install the Mangopay php library:
-
-```
-composer require mangopay/php-sdk-v2:^2.3
-```
-
-- Goto Storage/app/public create a folder name mangopay there
-
-- Run these commands below to complete the setup
-
-```
-composer dump-autoload
-```
-
-```
-php artisan migrate
-php artisan route:cache
-php artisan config:cache
-php artisan optimize
-```
-
-```
-php artisan db:seed --class=Webkul\\MangoPay\\Database\\Seeders\\DatabaseSeeder
-```
-
-- If your are windows user then run the below command-
-
-```
-php artisan db:seed --class="Webkul\MangoPay\Database\Seeders\DatabaseSeeder"
-```
-
-```
-php artisan vendor:publish --force
-```
--> Press the number for Webkul\MangoPay\Providers\MangoPayServiceProvider to publish all assets and configurations.
 
 > now execute the project on your specified domain.
